@@ -1,0 +1,49 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* REGOLE GENEREALI */
+:root{
+    --primary-color: #0084FD;
+    --primary-color-light: #B5DDFF;
+    --main-space: 2rem;
+}
+
+body{
+    font-family: 'PT Sans', sans-serif;
+}
+
+.container{
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 var(--main-space);
+}
+
+.box-debug{
+    background-color: var(--primary-color-light);
+    padding: 10px;
+}
+
+/* HEADER */
+header{
+    background-color: var(--primary-color)
+}
+
+.site-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* MAIN */
+main{
+
+}
+
+/* FOOTER */
+footer{
+
+}
