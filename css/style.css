@@ -9,6 +9,7 @@
 :root{
     --primary-color: #0084FD;
     --primary-color-light: #B5DDFF;
+    --secondary-color: #9792E4;
     --main-space: 2rem;
 }
 
@@ -29,7 +30,7 @@ body{
 
 /* HEADER */
 header{
-    background-color: var(--primary-color)
+    background-color: var(--primary-color);
 }
 
 .site-header{
@@ -39,11 +40,64 @@ header{
 }
 
 /* MAIN */
-main{
+/* Intro */
+#intro{
+    padding: var(--main-space) 0;
+}
 
+
+#intro .cards{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -0.75rem;
+}
+
+#intro .cards .card{
+    width: calc((100% / 3) - 1.5rem);
+    margin-bottom: var(--main-space);
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+
+    margin-bottom: var(--main-space);
+    background-color: var(--primary-color-light);
+} 
+
+#intro .cards .card:first-child{
+    width: calc(((100% / 3) * 2) - 1.5rem);
+    display: flex;
+    justify-content: space-between;
+} 
+
+#intro .cards .card:first-child > *{
+    width: 50%;
+} 
+
+/* Planning */
+#planning{
+    padding: var(--main-space) 0;
+    background-color: var(--secondary-color);
 }
 
 /* FOOTER */
 footer{
+
+}
+
+/* MEDIA QUERY */
+/* MOBILE -> TABLET */
+@media screen and (min-width: 480px) {
+
+    .container{
+        max-width: 750px;
+    }
+
+}
+
+/* TABLET -> DESKTOP */
+@media screen and (min-width: 768px) {
+
+    .container{
+        max-width: 1000px;
+    }
 
 }
