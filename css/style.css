@@ -11,6 +11,7 @@
     --primary-color-light: #B5DDFF;
     --secondary-color: #9792E4;
     --main-space: 2rem;
+    --light-color: #ddd;
 }
 
 body{
@@ -18,7 +19,7 @@ body{
 }
 
 .container{
-    max-width: 600px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0 var(--main-space);
 }
@@ -28,15 +29,25 @@ body{
     padding: 10px;
 }
 
-/* HEADER */
-header{
-    background-color: var(--primary-color);
+.flex{
+    display: flex;
 }
 
-.site-header{
-    display: flex;
-    align-items: center;
+.space-between{
     justify-content: space-between;
+}
+
+.color-white{
+    color: var(--light-color);
+}
+
+/* HEADER */
+header{
+
+}
+
+.site-header .hamburger-menu{
+    display: block;
 }
 
 /* MAIN */
@@ -54,7 +65,6 @@ header{
 
 #intro .cards .card{
     width: calc((100% / 3) - 1.5rem);
-    margin-bottom: var(--main-space);
     margin-left: 0.75rem;
     margin-right: 0.75rem;
 
@@ -78,26 +88,93 @@ header{
     background-color: var(--secondary-color);
 }
 
+#planning .my-row{
+    display: flex;
+    align-items: flex-end;
+    max-width: 768px;
+    margin: 0 auto;
+} 
+
+#planning .my-row .my-col{
+    width: 50%;
+} 
+
+/* Testimonials */
+#testimonials{
+    padding: var(--main-space) 0;
+}
+
+#testimonials .container> *{
+    margin-bottom: var(--main-space);
+}
+
+#testimonials .card{
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    display: flex;
+}
+
+/* Benefits */
+#benefits{
+    padding: var(--main-space) 0;
+    background-color: var(--secondary-color);
+}
+
+#benefits .my-row{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -0.75rem;
+} 
+
+#benefits .my-row .my-col{
+    width: calc((100% / 3) - 1.5rem);
+    margin-bottom: var(--main-space);
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+
+    margin-bottom: var(--main-space);
+} 
+
 /* FOOTER */
 footer{
 
 }
 
 /* MEDIA QUERY */
-/* MOBILE -> TABLET */
-@media screen and (min-width: 480px) {
+/* MEDIUM */
+@media screen and (max-width: 992px) {
 
     .container{
         max-width: 750px;
     }
 
-}
+    .site-header .hamburger-menu{
+        display: block;
+    }
 
-/* TABLET -> DESKTOP */
-@media screen and (min-width: 768px) {
-
-    .container{
-        max-width: 1000px;
+    .site-header nav{
+        display: none;
     }
 
 }
+
+/* SMALL */
+@media screen and (max-width: 768px) {
+
+    .container{
+        max-width: 600px;
+    }
+
+    #intro .cards .card{
+        width: calc(100% - 1.5rem);
+    
+    } 
+    
+    #intro .cards .card:first-child{
+        width: calc(100% - 1.5rem);
+
+    } 
+
+}
+
+
